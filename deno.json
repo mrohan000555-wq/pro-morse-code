@@ -1,0 +1,12 @@
+{
+  "tasks": {
+    "dev": "deno run --allow-net --allow-read https://deno.land/std/http/file_server.ts"
+  },
+  "imports": {
+    "std/": "https://deno.land/std@0.210.0/"
+  },
+  "compilerOptions": {
+    "allowJs": true,
+    "lib": ["deno.window", "dom"]
+  }
+}

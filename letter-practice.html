@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Letter Practice - Morse Code Audio & Signal Trainer</title>
+  <meta name="description" content="Practice Morse code letters A-Z with audio. Choose from beginner, intermediate, or challenge modes to improve your letter recognition skills.">
+  <link rel="canonical" href="https://morse-audio-trainer.deno.dev/letter-practice.html">
+  <meta property="og:title" content="Letter Practice - Morse Code Audio & Signal Trainer">
+  <meta property="og:description" content="Practice Morse code letters A-Z with audio. Choose from beginner, intermediate, or challenge modes to improve your letter recognition skills.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://morse-audio-trainer.deno.dev/letter-practice.html">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Letter Practice",
+    "description": "Practice Morse code letters A-Z with audio. Choose from beginner, intermediate, or challenge modes to improve your letter recognition skills.",
+    "url": "https://morse-audio-trainer.deno.dev/letter-practice.html",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Morse Code Audio & Signal Trainer",
+      "url": "https://morse-audio-trainer.deno.dev/"
+    }
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Morse Audio Trainer</a>
+      <button class="mobile-menu-toggle" aria-label="Toggle navigation">☰</button>
+      <nav>
+        <a href="audio-practice.html">Audio Practice</a>
+        <a href="letter-practice.html">Letter Practice</a>
+        <a href="number-practice.html">Number Practice</a>
+        <a href="morse-code-alphabet.html">Alphabet</a>
+        <a href="learn-morse-code.html">Learn</a>
+        <a href="faq.html">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <h1>Letter Practice</h1>
+      <p class="section-subtitle">Master the Morse code alphabet A-Z with audio practice</p>
+
+      <div class="card mt-4">
+        <div class="card-header">
+          <h2 class="card-title">Practice Mode</h2>
+        </div>
+        
+        <div class="form-group">
+          <label for="difficulty">Select Difficulty:</label>
+          <select id="difficulty">
+            <option value="beginner">Beginner - Common letters (E, T, A, O, I, N, S, H, R, D, L, U)</option>
+            <option value="intermediate">Intermediate - All letters A-Z</option>
+            <option value="challenge">Challenge - Random letters at higher speed</option>
+          </select>
+        </div>
+
+        <div class="audio-controls">
+          <div class="audio-control-group">
+            <label for="wpm">Speed (WPM):</label>
+            <input type="range" id="wpm" min="5" max="35" value="15" step="5">
+            <span id="wpm-value">15</span>
+          </div>
+          
+          <div class="audio-control-group">
+            <label for="frequency">Tone (Hz):</label>
+            <input type="range" id="frequency" min="300" max="1000" value="600" step="50">
+            <span id="frequency-value">600</span>
+          </div>
+          
+          <div class="audio-control-group">
+            <label for="volume">Volume:</label>
+            <input type="range" id="volume" min="0" max="100" value="50" step="5">
+            <span id="volume-value">50%</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mt-4">
+        <div class="card-header">
+          <h2 class="card-title">Practice Area</h2>
+        </div>
+
+        <div class="practice-area">
+          <div class="practice-display" id="practice-display">?</div>
+          <div class="practice-morse" id="practice-morse"></div>
+          
+          <div class="practice-controls">
+            <button id="start-btn" class="btn btn-primary">Start Practice</button>
+            <button id="play-again-btn" class="btn btn-secondary" disabled>Play Again</button>
+            <button id="show-answer-btn" class="btn btn-secondary" disabled>Show Answer</button>
+            <button id="next-btn" class="btn btn-success" disabled>Next Letter</button>
+          </div>
+
+          <div class="practice-input">
+            <input type="text" id="answer-input" placeholder="Type the letter you heard..." maxlength="1" disabled>
+            <button id="submit-btn" class="btn btn-primary mt-2" disabled>Submit Answer</button>
+          </div>
+
+          <div class="practice-feedback" id="practice-feedback"></div>
+        </div>
+      </div>
+
+      <div class="card mt-4">
+        <div class="card-header">
+          <h2 class="card-title">Your Progress</h2>
+        </div>
+
+        <div class="practice-stats">
+          <div class="stat-item">
+            <div class="stat-value" id="score">0</div>
+            <div class="stat-label">Score</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value" id="attempts">0</div>
+            <div class="stat-label">Attempts</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value" id="accuracy">0%</div>
+            <div class="stat-label">Accuracy</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value" id="difficulty-display">Beginner</div>
+            <div class="stat-label">Mode</div>
+          </div>
+        </div>
+
+        <div class="text-center mt-3">
+          <button id="reset-score-btn" class="btn btn-error btn-sm">Reset Score</button>
+        </div>
+      </div>
+
+      <div class="card mt-4">
+        <div class="card-header">
+          <h2 class="card-title">Letter Practice Tips</h2>
+        </div>
+        
+        <h3>Beginner Mode</h3>
+        <p>Focus on the 12 most common letters first. These letters appear most frequently in English text, so learning them gives you the most practical benefit. Start at 5-10 WPM and increase speed as you improve.</p>
+        
+        <h3 class="mt-3">Intermediate Mode</h3>
+        <p>Practice all 26 letters of the alphabet. This mode helps you learn less common letters and ensures you can recognize any letter when it appears in communication.</p>
+        
+        <h3 class="mt-3">Challenge Mode</h3>
+        <p>Random letters at higher speeds. This mode tests your ability to recognize letters quickly and is great for building speed and fluency. Recommended for experienced learners.</p>
+      </div>
+
+      <div class="card mt-4">
+        <div class="card-header">
+          <h2 class="card-title">Common Letter Groupings</h2>
+        </div>
+        
+        <p>Learning letters in groups can help with recognition:</p>
+        
+        <h3 class="mt-2">Short Letters (1-2 elements)</h3>
+        <p>E (.), T (-), I (..), A (.-), N (-.), M (--)</p>
+        
+        <h3 class="mt-2">Medium Letters (3-4 elements)</h3>
+        <p>S (...), U (..-), R (.-.), W (.--), D (-..), K (-.-), G (--.), O (---)</p>
+        
+        <h3 class="mt-2">Longer Letters (5+ elements)</h3>
+        <p>H (....), B (-...), V (...-), F (..-.), L (.-..), P (.--.), J (.---), Q (--.-), Y (-.--), Z (--..)</p>
+      </div>
+
+      <div class="mt-4">
+        <a href="audio-practice.html" class="btn btn-secondary">Audio Practice</a>
+        <a href="number-practice.html" class="btn btn-secondary">Number Practice</a>
+        <a href="morse-code-alphabet.html" class="btn btn-secondary">View Alphabet</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-links">
+        <a href="about.html">About</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+      <p class="footer-copyright">© 2026 Morse Code Audio & Signal Trainer</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/audio.js"></script>
+  <script src="assets/js/practice.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const audio = new MorseAudio();
+      const session = new AudioPracticeSession(audio);
+      
+      const wpmSlider = document.getElementById('wpm');
+      const wpmValue = document.getElementById('wpm-value');
+      const frequencySlider = document.getElementById('frequency');
+      const frequencyValue = document.getElementById('frequency-value');
+      const volumeSlider = document.getElementById('volume');
+      const volumeValue = document.getElementById('volume-value');
+      const difficultySelect = document.getElementById('difficulty');
+      
+      const startBtn = document.getElementById('start-btn');
+      const playAgainBtn = document.getElementById('play-again-btn');
+      const showAnswerBtn = document.getElementById('show-answer-btn');
+      const nextBtn = document.getElementById('next-btn');
+      const submitBtn = document.getElementById('submit-btn');
+      const resetScoreBtn = document.getElementById('reset-score-btn');
+      
+      const answerInput = document.getElementById('answer-input');
+      const practiceDisplay = document.getElementById('practice-display');
+      const practiceMorse = document.getElementById('practice-morse');
+      const practiceFeedback = document.getElementById('practice-feedback');
+      
+      let isPracticeActive = false;
+
+      wpmSlider.addEventListener('input', function() {
+        const wpm = parseInt(this.value);
+        wpmValue.textContent = wpm;
+        audio.setWPM(wpm);
+      });
+
+      frequencySlider.addEventListener('input', function() {
+        const freq = parseInt(this.value);
+        frequencyValue.textContent = freq;
+        audio.setFrequency(freq);
+      });
+
+      volumeSlider.addEventListener('input', function() {
+        const vol = parseInt(this.value) / 100;
+        volumeValue.textContent = this.value + '%';
+        audio.setVolume(vol);
+      });
+
+      difficultySelect.addEventListener('change', function() {
+        session.setDifficulty(this.value);
+        
+        if (this.value === 'challenge') {
+          wpmSlider.value = 25;
+          wpmValue.textContent = 25;
+          audio.setWPM(25);
+        } else {
+          wpmSlider.value = 15;
+          wpmValue.textContent = 15;
+          audio.setWPM(15);
+        }
+      });
+
+      startBtn.addEventListener('click', function() {
+        audio.setWPM(parseInt(wpmSlider.value));
+        audio.setFrequency(parseInt(frequencySlider.value));
+        audio.setVolume(parseInt(volumeSlider.value) / 100);
+        
+        session.setPracticeType('letters');
+        session.setDifficulty(difficultySelect.value);
+        
+        session.start();
+        isPracticeActive = true;
+        
+        practiceDisplay.textContent = '?';
+        practiceMorse.textContent = '';
+        practiceFeedback.textContent = '';
+        practiceFeedback.className = 'practice-feedback';
+        
+        startBtn.disabled = true;
+        playAgainBtn.disabled = false;
+        showAnswerBtn.disabled = false;
+        nextBtn.disabled = false;
+        submitBtn.disabled = false;
+        answerInput.disabled = false;
+        answerInput.value = '';
+        answerInput.focus();
+      });
+
+      playAgainBtn.addEventListener('click', function() {
+        session.playAgain();
+        practiceDisplay.textContent = '?';
+        practiceMorse.textContent = '';
+        practiceFeedback.textContent = '';
+        practiceFeedback.className = 'practice-feedback';
+      });
+
+      showAnswerBtn.addEventListener('click', function() {
+        const answer = session.showAnswer();
+        practiceDisplay.textContent = answer;
+        practiceMorse.textContent = audio.textToMorse(answer);
+      });
+
+      nextBtn.addEventListener('click', function() {
+        session.next();
+        practiceDisplay.textContent = '?';
+        practiceMorse.textContent = '';
+        practiceFeedback.textContent = '';
+        practiceFeedback.className = 'practice-feedback';
+        answerInput.value = '';
+        answerInput.focus();
+      });
+
+      submitBtn.addEventListener('click', function() {
+        const userAnswer = answerInput.value.trim().toUpperCase();
+        if (!userAnswer) return;
+        
+        const result = session.submitAnswer(userAnswer);
+        
+        practiceDisplay.textContent = result.correctAnswer;
+        practiceMorse.textContent = audio.textToMorse(result.correctAnswer);
+        
+        practiceFeedback.textContent = result.message;
+        practiceFeedback.className = 'practice-feedback ' + (result.correct ? 'correct' : 'incorrect');
+        
+        answerInput.value = '';
+      });
+
+      answerInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter' && !submitBtn.disabled) {
+          submitBtn.click();
+        }
+      });
+
+      answerInput.addEventListener('input', function() {
+        this.value = this.value.toUpperCase();
+      });
+
+      resetScoreBtn.addEventListener('click', function() {
+        session.reset();
+        practiceDisplay.textContent = '?';
+        practiceMorse.textContent = '';
+        practiceFeedback.textContent = '';
+        practiceFeedback.className = 'practice-feedback';
+        answerInput.value = '';
+      });
+
+      audio.onComplete = function() {
+        if (isPracticeActive) {
+          answerInput.focus();
+        }
+      };
+
+      difficultySelect.value = 'beginner';
+    });
+  </script>
+</body>
+</html>

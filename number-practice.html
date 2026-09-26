@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Number Practice - Morse Code Audio & Signal Trainer</title>
+  <meta name="description" content="Practice Morse code numbers 0-9 with audio. Test your number recognition skills with adjustable speed and score tracking.">
+  <link rel="canonical" href="https://morse-audio-trainer.deno.dev/number-practice.html">
+  <meta property="og:title" content="Number Practice - Morse Code Audio & Signal Trainer">
+  <meta property="og:description" content="Practice Morse code numbers 0-9 with audio. Test your number recognition skills with adjustable speed and score tracking.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://morse-audio-trainer.deno.dev/number-practice.html">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Number Practice",
+    "description": "Practice Morse code numbers 0-9 with audio. Test your number recognition skills with adjustable speed and score tracking.",
+    "url": "https://morse-audio-trainer.deno.dev/number-practice.html",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Morse Code Audio & Signal Trainer",
+      "url": "https://morse-audio-trainer.deno.dev/"
+    }
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Morse Audio Trainer</a>
+      <button class="mobile-menu-toggle" aria-label="Toggle navigation">☰</button>
+      <nav>
+        <a href="audio-practice.html">Audio Practice</a>
+        <a href="letter-practice.html">Letter Practice</a>
+        <a href="number-practice.html">Number Practice</a>
+        <a href="morse-code-alphabet.html">Alphabet</a>
+        <a href="learn-morse-code.html">Learn</a>
+        <a href="faq.html">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <h1>Number Practice</h1>
+      <p class="section-subtitle">Master Morse code numbers 0-9 with audio practice</p>
+
+      <div class="card mt-4">
+        <div class="card-header">
+          <h2 class="card-title">Practice Settings</h2>
+        </div>
+
+        <div class="audio-controls">
+          <div class="audio-control-group">
+            <label for="wpm">Speed (WPM):</label>
+            <input type="range" id="wpm" min="5" max="35" value="15" step="5">
+            <span id="wpm-value">15</span>
+          </div>
+          
+          <div class="audio-control-group">
+            <label for="frequency">Tone (Hz):</label>
+            <input type="range" id="frequency" min="300" max="1000" value="600" step="50">
+            <span id="frequency-value">600</span>
+          </div>
+          
+          <div class="audio-control-group">
+            <label for="volume">Volume:</label>
+            <input type="range" id="volume" min="0" max="100" value="50" step="5">
+            <span id="volume-value">50%</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mt-4">
+        <div class="card-header">
+          <h2 class="card-title">Practice Area</h2>
+        </div>
+
+        <div class="practice-area">
+          <div class="practice-display" id="practice-display">?</div>
+          <div class="practice-morse" id="practice-morse"></div>
+          
+          <div class="practice-controls">
+            <button id="start-btn" class="btn btn-primary">Start Practice</button>
+            <button id="play-again-btn" class="btn btn-secondary" disabled>Play Again</button>
+            <button id="show-answer-btn" class="btn btn-secondary" disabled>Show Answer</button>
+            <button id="next-btn" class="btn btn-success" disabled>Next Number</button>
+          </div>
+
+          <div class="practice-input">
+            <input type="text" id="answer-input" placeholder="Type the number you heard..." maxlength="1" disabled>
+            <button id="submit-btn" class="btn btn-primary mt-2" disabled>Submit Answer</button>
+          </div>
+
+          <div class="practice-feedback" id="practice-feedback"></div>
+        </div>
+      </div>
+
+      <div class="card mt-4">
+        <div class="card-header">
+          <h2 class="card-title">Your Progress</h2>
+        </div>
+
+        <div class="practice-stats">
+          <div class="stat-item">
+            <div class="stat-value" id="score">0</div>
+            <div class="stat-label">Score</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value" id="attempts">0</div>
+            <div class="stat-label">Attempts</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value" id="accuracy">0%</div>
+            <div class="stat-label">Accuracy</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value" id="mode-display">Numbers</div>
+            <div class="stat-label">Mode</div>
+          </div>
+        </div>
+
+        <div class="text-center mt-3">
+          <button id="reset-score-btn" class="btn btn-error btn-sm">Reset Score</button>
+        </div>
+      </div>
+
+      <div class="card mt-4">
+        <div class="card-header">
+          <h2 class="card-title">Morse Code Numbers Reference</h2>
+        </div>
+        
+        <table>
+          <thead>
+            <tr>
+              <th>Number</th>
+              <th>Morse</th>
+              <th>Pattern</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>0</td><td>-----</td><td>Five dashes</td></tr>
+            <tr><td>1</td><td>.----</td><td>Dot + four dashes</td></tr>
+            <tr><td>2</td><td>..---</td><td>Two dots + three dashes</td></tr>
+            <tr><td>3</td><td>...--</td><td>Three dots + two dashes</td></tr>
+            <tr><td>4</td><td>....-</td><td>Four dots + one dash</td></tr>
+            <tr><td>5</td><td>.....</td><td>Five dots</td></tr>
+            <tr><td>6</td><td>-....</td><td>One dash + four dots</td></tr>
+            <tr><td>7</td><td>--...</td><td>Two dashes + three dots</td></tr>
+            <tr><td>8</td><td>---..</td><td>Three dashes + two dots</td></tr>
+            <tr><td>9</td><td>----.</td><td>Four dashes + one dot</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card mt-4">
+        <div class="card-header">
+          <h2 class="card-title">Number Practice Tips</h2>
+        </div>
+        
+        <h3>Pattern Recognition</h3>
+        <p>Morse code numbers follow a clear pattern: 0 is five dashes, 5 is five dots, and the numbers in between mix dots and dashes. The count of dots increases from 0 to 5, then decreases back to 0.</p>
+        
+        <h3 class="mt-3">Start Slow</h3>
+        <p>Numbers can be tricky because they're longer than most letters. Start at 5-10 WPM to ensure you can hear each element clearly before increasing speed.</p>
+        
+        <h3 class="mt-3">Practice in Context</h3>
+        <p>Numbers often appear in coordinates, frequencies, and measurements. After learning individual numbers, try the mixed practice mode to practice numbers alongside letters.</p>
+        
+        <h3 class="mt-3">Common Uses</h3>
+        <p>Numbers are essential for:</p>
+        <ul>
+          <li>Amateur radio frequencies (e.g., 7.025 MHz)</li>
+          <li>Coordinates and positions</li>
+          <li>Signal reports (e.g., 59 signal report)</li>
+          <li>Time and dates</li>
+          <li>Measurements and quantities</li>
+        </ul>
+      </div>
+
+      <div class="mt-4">
+        <a href="audio-practice.html" class="btn btn-secondary">Audio Practice</a>
+        <a href="letter-practice.html" class="btn btn-secondary">Letter Practice</a>
+        <a href="morse-code-alphabet.html" class="btn btn-secondary">View Alphabet</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-links">
+        <a href="about.html">About</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+      <p class="footer-copyright">© 2026 Morse Code Audio & Signal Trainer</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/audio.js"></script>
+  <script src="assets/js/practice.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const audio = new MorseAudio();
+      const session = new AudioPracticeSession(audio);
+      
+      const wpmSlider = document.getElementById('wpm');
+      const wpmValue = document.getElementById('wpm-value');
+      const frequencySlider = document.getElementById('frequency');
+      const frequencyValue = document.getElementById('frequency-value');
+      const volumeSlider = document.getElementById('volume');
+      const volumeValue = document.getElementById('volume-value');
+      
+      const startBtn = document.getElementById('start-btn');
+      const playAgainBtn = document.getElementById('play-again-btn');
+      const showAnswerBtn = document.getElementById('show-answer-btn');
+      const nextBtn = document.getElementById('next-btn');
+      const submitBtn = document.getElementById('submit-btn');
+      const resetScoreBtn = document.getElementById('reset-score-btn');
+      
+      const answerInput = document.getElementById('answer-input');
+      const practiceDisplay = document.getElementById('practice-display');
+      const practiceMorse = document.getElementById('practice-morse');
+      const practiceFeedback = document.getElementById('practice-feedback');
+      
+      let isPracticeActive = false;
+
+      wpmSlider.addEventListener('input', function() {
+        const wpm = parseInt(this.value);
+        wpmValue.textContent = wpm;
+        audio.setWPM(wpm);
+      });
+
+      frequencySlider.addEventListener('input', function() {
+        const freq = parseInt(this.value);
+        frequencyValue.textContent = freq;
+        audio.setFrequency(freq);
+      });
+
+      volumeSlider.addEventListener('input', function() {
+        const vol = parseInt(this.value) / 100;
+        volumeValue.textContent = this.value + '%';
+        audio.setVolume(vol);
+      });
+
+      startBtn.addEventListener('click', function() {
+        audio.setWPM(parseInt(wpmSlider.value));
+        audio.setFrequency(parseInt(frequencySlider.value));
+        audio.setVolume(parseInt(volumeSlider.value) / 100);
+        
+        session.setPracticeType('numbers');
+        session.setDifficulty('intermediate');
+        
+        session.start();
+        isPracticeActive = true;
+        
+        practiceDisplay.textContent = '?';
+        practiceMorse.textContent = '';
+        practiceFeedback.textContent = '';
+        practiceFeedback.className = 'practice-feedback';
+        
+        startBtn.disabled = true;
+        playAgainBtn.disabled = false;
+        showAnswerBtn.disabled = false;
+        nextBtn.disabled = false;
+        submitBtn.disabled = false;
+        answerInput.disabled = false;
+        answerInput.value = '';
+        answerInput.focus();
+      });
+
+      playAgainBtn.addEventListener('click', function() {
+        session.playAgain();
+        practiceDisplay.textContent = '?';
+        practiceMorse.textContent = '';
+        practiceFeedback.textContent = '';
+        practiceFeedback.className = 'practice-feedback';
+      });
+
+      showAnswerBtn.addEventListener('click', function() {
+        const answer = session.showAnswer();
+        practiceDisplay.textContent = answer;
+        practiceMorse.textContent = audio.textToMorse(answer);
+      });
+
+      nextBtn.addEventListener('click', function() {
+        session.next();
+        practiceDisplay.textContent = '?';
+        practiceMorse.textContent = '';
+        practiceFeedback.textContent = '';
+        practiceFeedback.className = 'practice-feedback';
+        answerInput.value = '';
+        answerInput.focus();
+      });
+
+      submitBtn.addEventListener('click', function() {
+        const userAnswer = answerInput.value.trim();
+        if (!userAnswer) return;
+        
+        const result = session.submitAnswer(userAnswer);
+        
+        practiceDisplay.textContent = result.correctAnswer;
+        practiceMorse.textContent = audio.textToMorse(result.correctAnswer);
+        
+        practiceFeedback.textContent = result.message;
+        practiceFeedback.className = 'practice-feedback ' + (result.correct ? 'correct' : 'incorrect');
+        
+        answerInput.value = '';
+      });
+
+      answerInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter' && !submitBtn.disabled) {
+          submitBtn.click();
+        }
+      });
+
+      answerInput.addEventListener('input', function() {
+        this.value = this.value.replace(/[^0-9]/g, '');
+      });
+
+      resetScoreBtn.addEventListener('click', function() {
+        session.reset();
+        practiceDisplay.textContent = '?';
+        practiceMorse.textContent = '';
+        practiceFeedback.textContent = '';
+        practiceFeedback.className = 'practice-feedback';
+        answerInput.value = '';
+      });
+
+      audio.onComplete = function() {
+        if (isPracticeActive) {
+          answerInput.focus();
+        }
+      };
+    });
+  </script>
+</body>
+</html>

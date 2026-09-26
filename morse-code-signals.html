@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Morse Code Signals - Common Procedural Signals Reference</title>
+  <meta name="description" content="Learn common Morse code procedural signals like SOS, CQ, AR, SK, R, K. Understand their meanings in communication contexts with audio examples.">
+  <link rel="canonical" href="https://morse-audio-trainer.deno.dev/morse-code-signals.html">
+  <meta property="og:title" content="Morse Code Signals - Common Procedural Signals Reference">
+  <meta property="og:description" content="Learn common Morse code procedural signals like SOS, CQ, AR, SK, R, K. Understand their meanings in communication contexts with audio examples.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://morse-audio-trainer.deno.dev/morse-code-signals.html">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Morse Code Signals",
+    "description": "Learn common Morse code procedural signals like SOS, CQ, AR, SK, R, K. Understand their meanings in communication contexts with audio examples.",
+    "url": "https://morse-audio-trainer.deno.dev/morse-code-signals.html",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Morse Code Audio & Signal Trainer",
+      "url": "https://morse-audio-trainer.deno.dev/"
+    }
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Morse Audio Trainer</a>
+      <button class="mobile-menu-toggle" aria-label="Toggle navigation">☰</button>
+      <nav>
+        <a href="audio-practice.html">Audio Practice</a>
+        <a href="letter-practice.html">Letter Practice</a>
+        <a href="number-practice.html">Number Practice</a>
+        <a href="morse-code-alphabet.html">Alphabet</a>
+        <a href="learn-morse-code.html">Learn</a>
+        <a href="faq.html">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <h1>Morse Code Signals</h1>
+      <p class="section-subtitle">Common procedural signals and their meanings in communication</p>
+
+      <div class="card mt-4">
+        <div class="card-header">
+          <h2 class="card-title">Audio Settings</h2>
+        </div>
+        <div class="audio-controls">
+          <div class="audio-control-group">
+            <label for="wpm">Speed (WPM):</label>
+            <input type="range" id="wpm" min="5" max="35" value="20" step="5">
+            <span id="wpm-value">20</span>
+          </div>
+          
+          <div class="audio-control-group">
+            <label for="frequency">Tone (Hz):</label>
+            <input type="range" id="frequency" min="300" max="1000" value="600" step="50">
+            <span id="frequency-value">600</span>
+          </div>
+          
+          <div class="audio-control-group">
+            <label for="volume">Volume:</label>
+            <input type="range" id="volume" min="0" max="100" value="50" step="5">
+            <span id="volume-value">50%</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mt-4">
+        <div class="card-header">
+          <h2 class="card-title">Essential Emergency Signals</h2>
+        </div>
+        
+        <table>
+          <thead>
+            <tr>
+              <th>Signal</th>
+              <th>Morse</th>
+              <th>Common Meaning</th>
+              <th>Play</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>SOS</strong></td>
+              <td>... --- ...</td>
+              <td>International distress signal. Used to indicate emergency and request immediate assistance. Recognized worldwide across maritime, aviation, and amateur radio communications.</td>
+              <td><button class="btn btn-sm btn-secondary play-btn" data-signal="SOS">Play</button></td>
+            </tr>
+            <tr>
+              <td><strong>MAYDAY</strong></td>
+              <td>-- .- -.. .- -.--</td>
+              <td>Voice distress signal used in radio communications. While not strictly a Morse code procedural signal, it's the spoken equivalent of SOS and often used alongside Morse in emergencies.</td>
+              <td><button class="btn btn-sm btn-secondary play-btn" data-signal="MAYDAY">Play</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card mt-4">
+        <div class="card-header">
+          <h2 class="card-title">Calling and Contact Signals</h2>
+        </div>
+        
+        <table>
+          <thead>
+            <tr>
+              <th>Signal</th>
+              <th>Morse</th>
+              <th>Common Meaning</th>
+              <th>Play</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>CQ</strong></td>
+              <td>-.-. --.-</td>
+              <td>Calling any station. Used to initiate contact with any amateur radio operator who may be listening. "CQ DX" specifically calls distant stations.</td>
+              <td><button class="btn btn-sm btn-secondary play-btn" data-signal="CQ">Play</button></td>
+            </tr>
+            <tr>
+              <td><strong>DE</strong></td>
+              <td>-.. .</td>
+              <td>"From" or "This is". Used to identify the sending station. Example: "CQ CQ DE W1ABC" means "Calling any station, this is W1ABC".</td>
+              <td><button class="btn btn-sm btn-secondary play-btn" data-signal="DE">Play</button></td>
+            </tr>
+            <tr>
+              <td><strong>K</strong></td>
+              <td>-.-</td>
+              <td>Invitation to transmit. Indicates the sending station is finished and expects a response. Used to hand over the conversation.</td>
+              <td><button class="btn btn-sm btn-secondary play-btn" data-signal="K">Play</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card mt-4">
+        <div class="card-header">
+          <h2 class="card-title">Message Control Signals</h2>
+        </div>
+        
+        <table>
+          <thead>
+            <tr>
+              <th>Signal</th>
+              <th>Morse</th>
+              <th>Common Meaning</th>
+              <th>Play</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>AR</strong></td>
+              <td>.-.-.</td>
+              <td>End of message. Indicates the sending station has finished their transmission and is ending the current message. Often used as "AR" or "+".</td>
+              <td><button class="btn btn-sm btn-secondary play-btn" data-signal="AR">Play</button></td>
+            </tr>
+            <tr>
+              <td><strong>SK</strong></td>
+              <td>...-.-</td>
+              <td>End of contact. Indicates the sending station is completely ending the conversation and signing off. Also written as "SK".</td>
+              <td><button class="btn btn-sm btn-secondary play-btn" data-signal="SK">Play</button></td>
+            </tr>
+            <tr>
+              <td><strong>BT</strong></td>
+              <td>-...-</td>
+              <td>Break. Used to separate parts of a message or indicate a pause within a transmission. Similar to a paragraph break in written text.</td>
+              <td><button class="btn btn-sm btn-secondary play-btn" data-signal="BT">Play</button></td>
+            </tr>
+            <tr>
+              <td><strong>AA</strong></td>
+              <td>.- .-</td>
+              <td>End of line. Used to indicate the end of a line of text in formatted messages, particularly in formal communications.</td>
+              <td><button class="btn btn-sm btn-secondary play-btn" data-signal="AA">Play</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card mt-4">
+        <div class="card-header">
+          <h2 class="card-title">Acknowledgment and Response Signals</h2>
+        </div>
+        
+        <table>
+          <thead>
+            <tr>
+              <th>Signal</th>
+              <th>Morse</th>
+              <th>Common Meaning</th>
+              <th>Play</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>R</strong></td>
+              <td>.-.</td>
+              <td>Received / Roger. Acknowledges that a message has been received and understood. "Roger" is the phonetic equivalent used in voice communications.</td>
+              <td><button class="btn btn-sm btn-secondary play-btn" data-signal="R">Play</button></td>
+            </tr>
+            <tr>
+              <td><strong>QSL</strong></td>
+              <td>--.- ... .-..</td>
+              <td>Confirmation or acknowledgment. Used to confirm receipt of a message or to confirm a contact (QSO) in amateur radio logging.</td>
+              <td><button class="btn btn-sm btn-secondary play-btn" data-signal="QSL">Play</button></td>
+            </tr>
+            <tr>
+              <td><strong>QRZ</strong></td>
+              <td>--.- .-. --..</td>
+              <td>"Who is calling me?" Used when a station hears their call sign but didn't catch the calling station's identification.</td>
+              <td><button class="btn btn-sm btn-secondary play-btn" data-signal="QRZ">Play</button></td>
+            </tr>
+            <tr>
+              <td><strong>QRM</strong></td>
+              <td>--.- .-. --</td>
+              <td>Interference. Used to report that there is interference from other stations affecting the communication.</td>
+              <td><button class="btn btn-sm btn-secondary play-btn" data-signal="QRM">Play</button></td>
+            </tr>
+            <tr>
+              <td><strong>QRN</strong></td>
+              <td>--.- .-. -.</td>
+              <td>Static/atmospheric noise. Used to report that atmospheric noise is affecting reception quality.</td>
+              <td><button class="btn btn-sm btn-secondary play-btn" data-signal="QRN">Play</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card mt-4">
+        <div class="card-header">
+          <h2 class="card-title">Operating and Status Signals</h2>
+        </div>
+        
+        <table>
+          <thead>
+            <tr>
+              <th>Signal</th>
+              <th>Morse</th>
+              <th>Common Meaning</th>
+              <th>Play</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>QTH</strong></td>
+              <td>--.- - ....</td>
+              <td>Location. Used to ask for or provide a station's location. Example: "QTH New York" means "My location is New York".</td>
+              <td><button class="btn btn-sm btn-secondary play-btn" data-signal="QTH">Play</button></td>
+            </tr>
+            <tr>
+              <td><strong>QSY</strong></td>
+              <td>--.- ... -.--</td>
+              <td>Changing frequency. Used to indicate that a station is moving to a different frequency. Example: "QSY 7.025" means "Moving to 7.025 MHz".</td>
+              <td><button class="btn btn-sm btn-secondary play-btn" data-signal="QSY">Play</button></td>
+            </tr>
+            <tr>
+              <td><strong>QRL</strong></td>
+              <td>--.- .-. .-..</td>
+              <td>"Are you busy?" Used to ask if a frequency is in use before transmitting. A common courtesy in amateur radio.</td>
+              <td><button class="btn btn-sm btn-secondary play-btn" data-signal="QRL">Play</button></td>
+            </tr>
+            <tr>
+              <td><strong>QRM</strong></td>
+              <td>--.- .-. --</td>
+              <td>Interference. Used to report interference from other stations.</td>
+              <td><button class="btn btn-sm btn-secondary play-btn" data-signal="QRM">Play</button></td>
+            </tr>
+            <tr>
+              <td><strong>QRP</strong></td>
+              <td>--.- .-. .--.</td>
+              <td>Low power operation. Used to indicate or ask about low-power transmissions. "QRP" typically means 5 watts or less.</td>
+              <td><button class="btn btn-sm btn-secondary play-btn" data-signal="QRP">Play</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card mt-4">
+        <div class="card-header">
+          <h2 class="card-title">Understanding Signal Context</h2>
+        </div>
+        
+        <h3>Signals Are Context-Dependent</h3>
+        <p>The meaning of Morse signals can vary depending on the communication context. While the signals listed above have common meanings, their exact interpretation may differ based on:</p>
+        
+        <ul class="mt-2">
+          <li><strong>Communication Type:</strong> Maritime, aviation, amateur radio, military, or emergency services</li>
+          <li><strong>Regional Practices:</strong> Different regions may have slight variations in signal usage</li>
+          <li><strong>Specific Protocols:</strong> Certain organizations or operations may use modified signal sets</li>
+          <li><strong>Modern Adaptations:</strong> Digital modes and new technologies may incorporate traditional signals differently</li>
+        </ul>
+        
+        <h3 class="mt-3">Q-Codes</h3>
+        <p>Many signals starting with "Q" are Q-codes, standardized three-letter codes used in radio communications. They were originally developed to simplify communication and reduce transmission time. Each Q-code has a question form and an answer form.</p>
+        
+        <h3 class="mt-3">Procedural Signals</h3>
+        <p>Procedural signals (prosigns) like AR, SK, and BT are unique combinations that represent common phrases. They're sent as continuous characters without the usual inter-character spacing, making them faster to transmit than spelling out the words.</p>
+      </div>
+
+      <div class="card mt-4">
+        <div class="card-header">
+          <h2 class="card-title">Learning Signals</h2>
+        </div>
+        
+        <h3>Start with Essentials</h3>
+        <p>Begin with the most critical signals: SOS (emergency), CQ (calling), K (over), and R (received). These form the foundation of Morse communication.</p>
+        
+        <h3 class="mt-3">Practice in Context</h3>
+        <p>Signals are most useful when understood in context. Practice recognizing them within simulated conversations rather than in isolation.</p>
+        
+        <h3 class="mt-3">Audio Recognition</h3>
+        <p>Use the play buttons above to hear each signal. Focus on the rhythm and pattern - signals often have distinctive audio characteristics that help with quick recognition.</p>
+        
+        <h3 class="mt-3">Real-World Application</h3>
+        <p>While Morse code is less common in everyday communication today, these signals remain important in amateur radio, emergency communications, and as part of radio operator training.</p>
+      </div>
+
+      <div class="mt-4">
+        <a href="audio-practice.html" class="btn btn-secondary">Audio Practice</a>
+        <a href="morse-code-alphabet.html" class="btn btn-secondary">Alphabet Reference</a>
+        <a href="learn-morse-code.html" class="btn btn-secondary">Learn Morse Code</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-links">
+        <a href="about.html">About</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+      <p class="footer-copyright">© 2026 Morse Code Audio & Signal Trainer</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/audio.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const audio = new MorseAudio();
+      
+      const wpmSlider = document.getElementById('wpm');
+      const wpmValue = document.getElementById('wpm-value');
+      const frequencySlider = document.getElementById('frequency');
+      const frequencyValue = document.getElementById('frequency-value');
+      const volumeSlider = document.getElementById('volume');
+      const volumeValue = document.getElementById('volume-value');
+      
+      wpmSlider.addEventListener('input', function() {
+        const wpm = parseInt(this.value);
+        wpmValue.textContent = wpm;
+        audio.setWPM(wpm);
+      });
+
+      frequencySlider.addEventListener('input', function() {
+        const freq = parseInt(this.value);
+        frequencyValue.textContent = freq;
+        audio.setFrequency(freq);
+      });
+
+      volumeSlider.addEventListener('input', function() {
+        const vol = parseInt(this.value) / 100;
+        volumeValue.textContent = this.value + '%';
+        audio.setVolume(vol);
+      });
+
+      document.querySelectorAll('.play-btn').forEach(button => {
+        button.addEventListener('click', function() {
+          const signal = this.getAttribute('data-signal');
+          audio.setWPM(parseInt(wpmSlider.value));
+          audio.setFrequency(parseInt(frequencySlider.value));
+          audio.setVolume(parseInt(volumeSlider.value) / 100);
+          audio.play(signal);
+        });
+      });
+    });
+  </script>
+</body>
+</html>

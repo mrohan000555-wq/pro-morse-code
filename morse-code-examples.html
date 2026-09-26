@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Morse Code Examples - Sample Words and Phrases with Audio</title>
+  <meta name="description" content="Morse code examples with common words, phrases, and sentences. Listen to audio playback of HELLO, SOS, HELP, YES, NO, and more with our Morse code audio generator.">
+  <link rel="canonical" href="https://morse-audio-trainer.deno.dev/morse-code-examples.html">
+  <meta property="og:title" content="Morse Code Examples - Sample Words and Phrases with Audio">
+  <meta property="og:description" content="Morse code examples with common words, phrases, and sentences. Listen to audio playback of HELLO, SOS, HELP, YES, NO, and more with our Morse code audio generator.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://morse-audio-trainer.deno.dev/morse-code-examples.html">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Morse Code Examples",
+    "description": "Morse code examples with common words, phrases, and sentences. Listen to audio playback of HELLO, SOS, HELP, YES, NO, and more with our Morse code audio generator.",
+    "url": "https://morse-audio-trainer.deno.dev/morse-code-examples.html",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Morse Code Audio & Signal Trainer",
+      "url": "https://morse-audio-trainer.deno.dev/"
+    }
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Morse Audio Trainer</a>
+      <button class="mobile-menu-toggle" aria-label="Toggle navigation">☰</button>
+      <nav>
+        <a href="audio-practice.html">Audio Practice</a>
+        <a href="letter-practice.html">Letter Practice</a>
+        <a href="number-practice.html">Number Practice</a>
+        <a href="morse-code-alphabet.html">Alphabet</a>
+        <a href="learn-morse-code.html">Learn</a>
+        <a href="faq.html">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <h1>Morse Code Examples</h1>
+      <p class="section-subtitle">Common words, phrases, and sentences with audio playback</p>
+
+      <div class="card mt-4">
+        <div class="card-header">
+          <h2 class="card-title">Audio Settings</h2>
+        </div>
+        <div class="audio-controls">
+          <div class="audio-control-group">
+            <label for="wpm">Speed (WPM):</label>
+            <input type="range" id="wpm" min="5" max="35" value="20" step="5">
+            <span id="wpm-value">20</span>
+          </div>
+          
+          <div class="audio-control-group">
+            <label for="frequency">Tone (Hz):</label>
+            <input type="range" id="frequency" min="300" max="1000" value="600" step="50">
+            <span id="frequency-value">600</span>
+          </div>
+          
+          <div class="audio-control-group">
+            <label for="volume">Volume:</label>
+            <input type="range" id="volume" min="0" max="100" value="50" step="5">
+            <span id="volume-value">50%</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mt-4">
+        <div class="card-header">
+          <h2 class="card-title">Common Words</h2>
+        </div>
+        
+        <table>
+          <thead>
+            <tr>
+              <th>Word</th>
+              <th>Morse Code</th>
+              <th>Play</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>HELLO</strong></td>
+              <td>.... . .-.. .-.. ---</td>
+              <td><button class="btn btn-sm btn-secondary play-btn" data-text="HELLO">Play</button></td>
+            </tr>
+            <tr>
+              <td><strong>WORLD</strong></td>
+              <td>.-- --- .-. .-.. -..</td>
+              <td><button class="btn btn-sm btn-secondary play-btn" data-text="WORLD">Play</button></td>
+            </tr>
+            <tr>
+              <td><strong>HELP</strong></td>
+              <td>.... . .-.. .--.</td>
+              <td><button class="btn btn-sm btn-secondary play-btn" data-text="HELP">Play</button></td>
+            </tr>
+            <tr>
+              <td><strong>YES</strong></td>
+              <td>-. . ...</td>
+              <td><button class="btn btn-sm btn-secondary play-btn" data-text="YES">Play</button></td>
+            </tr>
+            <tr>
+              <td><strong>NO</strong></td>
+              <td>-. ---</td>
+              <td><button class="btn btn-sm btn-secondary play-btn" data-text="NO">Play</button></td>
+            </tr>
+            <tr>
+              <td><strong>THANK</strong></td>
+              <td>- .... .- -. -.-</td>
+              <td><button class="btn btn-sm btn-secondary play-btn" data-text="THANK">Play</button></td>
+            </tr>
+            <tr>
+              <td><strong>PLEASE</strong></td>
+              <td>.--. .-.. . .- ... .</td>
+              <td><button class="btn btn-sm btn-secondary play-btn" data-text="PLEASE">Play</button></td>
+            </tr>
+            <tr>
+              <td><strong>GOOD</strong></td>
+              <td>--. --- --- -..</td>
+              <td><button class="btn btn-sm btn-secondary play-btn" data-text="GOOD">Play</button></td>
+            </tr>
+            <tr>
+              <td><strong>NIGHT</strong></td>
+              <td>-. .. --. .... -</td>
+              <td><button class="btn btn-sm btn-secondary play-btn" data-text="NIGHT">Play</button></td>
+            </tr>
+            <tr>
+              <td><strong>MORNING</strong></td>
+              <td>-- --- .-. -. .. -. --.</td>
+              <td><button class="btn btn-sm btn-secondary play-btn" data-text="MORNING">Play</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card mt-4">
+        <div class="card-header">
+          <h2 class="card-title">Emergency Signals</h2>
+        </div>
+        
+        <table>
+          <thead>
+            <tr>
+              <th>Signal</th>
+              <th>Morse Code</th>
+              <th>Play</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>SOS</strong></td>
+              <td>... --- ...</td>
+              <td><button class="btn btn-sm btn-secondary play-btn" data-text="SOS">Play</button></td>
+            </tr>
+            <tr>
+              <td><strong>HELP</strong></td>
+              <td>.... . .-.. .--.</td>
+              <td><button class="btn btn-sm btn-secondary play-btn" data-text="HELP">Play</button></td>
+            </tr>
+            <tr>
+              <td><strong>URGENT</strong></td>
+              <td>..- .-. --. . -. -</td>
+              <td><button class="btn btn-sm btn-secondary play-btn" data-text="URGENT">Play</button></td>
+            </tr>
+            <tr>
+              <td><strong>DANGER</strong></td>
+              <td>-.. .- -. --. . .-.</td>
+              <td><button class="btn btn-sm btn-secondary play-btn" data-text="DANGER">Play</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card mt-4">
+        <div class="card-header">
+          <h2 class="card-title">Common Phrases</h2>
+        </div>
+        
+        <table>
+          <thead>
+            <tr>
+              <th>Phrase</th>
+              <th>Morse Code</th>
+              <th>Play</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>GOOD MORNING</strong></td>
+              <td>--. --- --- -.. / -- --- .-. -. .. -. --.</td>
+              <td><button class="btn btn-sm btn-secondary play-btn" data-text="GOOD MORNING">Play</button></td>
+            </tr>
+            <tr>
+              <td><strong>GOOD NIGHT</strong></td>
+              <td>--. --- --- -.. / -. .. --. .... -</td>
+              <td><button class="btn btn-sm btn-secondary play-btn" data-text="GOOD NIGHT">Play</button></td>
+            </tr>
+            <tr>
+              <td><strong>THANK YOU</strong></td>
+              <td>- .... .- -. -.- / -.-- --- ..-</td>
+              <td><button class="btn btn-sm btn-secondary play-btn" data-text="THANK YOU">Play</button></td>
+            </tr>
+            <tr>
+              <td><strong>PLEASE</strong></td>
+              <td>.--. .-.. . .- ... .</td>
+              <td><button class="btn btn-sm btn-secondary play-btn" data-text="PLEASE">Play</button></td>
+            </tr>
+            <tr>
+              <td><strong>HELLO WORLD</strong></td>
+              <td>.... . .-.. .-.. --- / .-- --- .-. .-.. -..</td>
+              <td><button class="btn btn-sm btn-secondary play-btn" data-text="HELLO WORLD">Play</button></td>
+            </tr>
+            <tr>
+              <td><strong>WELCOME</strong></td>
+              <td>.-- . .-.. -.-. --- -- .</td>
+              <td><button class="btn btn-sm btn-secondary play-btn" data-text="WELCOME">Play</button></td>
+            </tr>
+            <tr>
+              <td><strong>GOOD BYE</strong></td>
+              <td>--. --- --- -.. / -... -.-- .</td>
+              <td><button class="btn btn-sm btn-secondary play-btn" data-text="GOOD BYE">Play</button></td>
+            </tr>
+            <tr>
+              <td><strong>SEE YOU</strong></td>
+              <td>... . . / -.-- --- ..-</td>
+              <td><button class="btn btn-sm btn-secondary play-btn" data-text="SEE YOU">Play</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card mt-4">
+        <div class="card-header">
+          <h2 class="card-title">Short Sentences</h2>
+        </div>
+        
+        <table>
+          <thead>
+            <tr>
+              <th>Sentence</th>
+              <th>Morse Code</th>
+              <th>Play</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>I AM FINE</strong></td>
+              <td>.. / .- -- / ..-. .. -. .</td>
+              <td><button class="btn btn-sm btn-secondary play-btn" data-text="I AM FINE">Play</button></td>
+            </tr>
+            <tr>
+              <td><strong>HOW ARE YOU</strong></td>
+              <td>.... --- .-- / .- .-. . / -.-- --- ..-</td>
+              <td><button class="btn btn-sm btn-secondary play-btn" data-text="HOW ARE YOU">Play</button></td>
+            </tr>
+            <tr>
+              <td><strong>NICE TO MEET YOU</strong></td>
+              <td>-. .. -.-. . / - --- / -- . . - / -.-- --- ..-</td>
+              <td><button class="btn btn-sm btn-secondary play-btn" data-text="NICE TO MEET YOU">Play</button></td>
+            </tr>
+            <tr>
+              <td><strong>WHAT IS YOUR NAME</strong></td>
+              <td>.-- .... .- - / .. ... / -.-- --- ..- .-. / -. .- -- .</td>
+              <td><button class="btn btn-sm btn-secondary play-btn" data-text="WHAT IS YOUR NAME">Play</button></td>
+            </tr>
+            <tr>
+              <td><strong>MY NAME IS</strong></td>
+              <td>-- -.-- / -. .- -- . / .. ...</td>
+              <td><button class="btn btn-sm btn-secondary play-btn" data-text="MY NAME IS">Play</button></td>
+            </tr>
+            <tr>
+              <td><strong>WHERE ARE YOU</strong></td>
+              <td>.-- .... . .-. . / .- .-. . / -.-- --- ..-</td>
+              <td><button class="btn btn-sm btn-secondary play-btn" data-text="WHERE ARE YOU">Play</button></td>
+            </tr>
+            <tr>
+              <td><strong>I NEED HELP</strong></td>
+              <td>.. / -. . . -.. / .... . .-.. .--.</td>
+              <td><button class="btn btn-sm btn-secondary play-btn" data-text="I NEED HELP">Play</button></td>
+            </tr>
+            <tr>
+              <td><strong>CALL ME</strong></td>
+              <td>-.-. .- .-.. .-.. / -- .</td>
+              <td><button class="btn btn-sm btn-secondary play-btn" data-text="CALL ME">Play</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card mt-4">
+        <div class="card-header">
+          <h2 class="card-title">Numbers and Coordinates</h2>
+        </div>
+        
+        <table>
+          <thead>
+            <tr>
+              <th>Example</th>
+              <th>Morse Code</th>
+              <th>Play</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>123</strong></td>
+              <td>.---- ..--- ...--</td>
+              <td><button class="btn btn-sm btn-secondary play-btn" data-text="123">Play</button></td>
+            </tr>
+            <tr>
+              <td><strong>456</strong></td>
+              <td>....- ..... -....</td>
+              <td><button class="btn btn-sm btn-secondary play-btn" data-text="456">Play</button></td>
+            </tr>
+            <tr>
+              <td><strong>789</strong></td>
+              <td>--... ---.. ----.</td>
+              <td><button class="btn btn-sm btn-secondary play-btn" data-text="789">Play</button></td>
+            </tr>
+            <tr>
+              <td><strong>2024</strong></td>
+              <td>..--- ----- ..--- ....-</td>
+              <td><button class="btn btn-sm btn-secondary play-btn" data-text="2024">Play</button></td>
+            </tr>
+            <tr>
+              <td><strong>FREQUENCY 7.025</strong></td>
+              <td>..-. .-. . --.- ..- . -. -.-. -.-- / --... ----- ..--- ..... </td>
+              <td><button class="btn btn-sm btn-secondary play-btn" data-text="FREQUENCY 7025">Play</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card mt-4">
+        <div class="card-header">
+          <h2 class="card-title">Custom Text Player</h2>
+        </div>
+        
+        <div class="form-group">
+          <label for="custom-text">Enter your own text to hear in Morse code:</label>
+          <textarea id="custom-text" placeholder="Type any text here..."></textarea>
+        </div>
+        
+        <div class="morse-output" id="custom-morse"></div>
+        
+        <button id="play-custom-btn" class="btn btn-primary">Play Custom Text</button>
+      </div>
+
+      <div class="card mt-4">
+        <div class="card-header">
+          <h2 class="card-title">Practice Tips</h2>
+        </div>
+        
+        <h3>Using Examples for Learning</h3>
+        <p>These examples are great for:</p>
+        
+        <ul class="mt-2">
+          <li><strong>Pattern Recognition:</strong> Listen to common words to recognize familiar patterns</li>
+          <li><strong>Speed Building:</strong> Practice phrases at increasing speeds</li>
+          <li><strong>Context Learning:</strong> Understand how characters flow together in words</li>
+          <li><strong>Real-World Prep:</strong> Practice with actual communication phrases</li>
+        </ul>
+        
+        <h3 class="mt-3">Recommended Practice</h3>
+        <ol class="mt-2">
+          <li>Start with single words at slow speed (5-10 WPM)</li>
+          <li>Progress to short phrases as you improve</li>
+          <li>Try the custom player with your own practice text</li>
+          <li>Gradually increase speed as your recognition improves</li>
+        </ol>
+        
+        <h3 class="mt-3">Timing and Rhythm</h3>
+        <p>Notice how the rhythm changes between short words (like "YES") and longer words (like "MORNING"). The spacing between letters and words is just as important as the dots and dashes themselves.</p>
+      </div>
+
+      <div class="mt-4">
+        <a href="audio-practice.html" class="btn btn-secondary">Audio Practice</a>
+        <a href="letter-practice.html" class="btn btn-secondary">Letter Practice</a>
+        <a href="morse-code-alphabet.html" class="btn btn-secondary">Alphabet Reference</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-links">
+        <a href="about.html">About</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+      <p class="footer-copyright">© 2026 Morse Code Audio & Signal Trainer</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/audio.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const audio = new MorseAudio();
+      
+      const wpmSlider = document.getElementById('wpm');
+      const wpmValue = document.getElementById('wpm-value');
+      const frequencySlider = document.getElementById('frequency');
+      const frequencyValue = document.getElementById('frequency-value');
+      const volumeSlider = document.getElementById('volume');
+      const volumeValue = document.getElementById('volume-value');
+      const customText = document.getElementById('custom-text');
+      const customMorse = document.getElementById('custom-morse');
+      const playCustomBtn = document.getElementById('play-custom-btn');
+      
+      wpmSlider.addEventListener('input', function() {
+        const wpm = parseInt(this.value);
+        wpmValue.textContent = wpm;
+        audio.setWPM(wpm);
+      });
+
+      frequencySlider.addEventListener('input', function() {
+        const freq = parseInt(this.value);
+        frequencyValue.textContent = freq;
+        audio.setFrequency(freq);
+      });
+
+      volumeSlider.addEventListener('input', function() {
+        const vol = parseInt(this.value) / 100;
+        volumeValue.textContent = this.value + '%';
+        audio.setVolume(vol);
+      });
+
+      document.querySelectorAll('.play-btn').forEach(button => {
+        button.addEventListener('click', function() {
+          const text = this.getAttribute('data-text');
+          audio.setWPM(parseInt(wpmSlider.value));
+          audio.setFrequency(parseInt(frequencySlider.value));
+          audio.setVolume(parseInt(volumeSlider.value) / 100);
+          audio.play(text);
+        });
+      });
+
+      customText.addEventListener('input', function() {
+        const text = this.value.trim();
+        if (text) {
+          customMorse.textContent = audio.textToMorse(text);
+        } else {
+          customMorse.textContent = '';
+        }
+      });
+
+      playCustomBtn.addEventListener('click', function() {
+        const text = customText.value.trim();
+        if (text) {
+          audio.setWPM(parseInt(wpmSlider.value));
+          audio.setFrequency(parseInt(frequencySlider.value));
+          audio.setVolume(parseInt(volumeSlider.value) / 100);
+          audio.play(text);
+        }
+      });
+    });
+  </script>
+</body>
+</html>

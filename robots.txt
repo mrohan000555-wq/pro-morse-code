@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://morse-audio-trainer.deno.dev/sitemap.xml

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Morse Code Alphabet - Complete A-Z Reference with Audio</title>
+  <meta name="description" content="Complete International Morse Code alphabet reference with A-Z, numbers, and punctuation. Listen to each character with our audio player.">
+  <link rel="canonical" href="https://morse-audio-trainer.deno.dev/morse-code-alphabet.html">
+  <meta property="og:title" content="Morse Code Alphabet - Complete A-Z Reference with Audio">
+  <meta property="og:description" content="Complete International Morse Code alphabet reference with A-Z, numbers, and punctuation. Listen to each character with our audio player.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://morse-audio-trainer.deno.dev/morse-code-alphabet.html">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Morse Code Alphabet",
+    "description": "Complete International Morse Code alphabet reference with A-Z, numbers, and punctuation. Listen to each character with our audio player.",
+    "url": "https://morse-audio-trainer.deno.dev/morse-code-alphabet.html",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Morse Code Audio & Signal Trainer",
+      "url": "https://morse-audio-trainer.deno.dev/"
+    }
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Morse Audio Trainer</a>
+      <button class="mobile-menu-toggle" aria-label="Toggle navigation">☰</button>
+      <nav>
+        <a href="audio-practice.html">Audio Practice</a>
+        <a href="letter-practice.html">Letter Practice</a>
+        <a href="number-practice.html">Number Practice</a>
+        <a href="morse-code-alphabet.html">Alphabet</a>
+        <a href="learn-morse-code.html">Learn</a>
+        <a href="faq.html">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <h1>Morse Code Alphabet</h1>
+      <p class="section-subtitle">Complete International Morse Code reference with audio playback</p>
+
+      <div class="card mt-4">
+        <div class="card-header">
+          <h2 class="card-title">Search & Filter</h2>
+        </div>
+        <div class="search-box">
+          <input type="text" id="search-input" placeholder="Search for a character or Morse pattern...">
+        </div>
+        <div class="audio-controls">
+          <div class="audio-control-group">
+            <label for="wpm">Speed (WPM):</label>
+            <input type="range" id="wpm" min="5" max="35" value="20" step="5">
+            <span id="wpm-value">20</span>
+          </div>
+          
+          <div class="audio-control-group">
+            <label for="frequency">Tone (Hz):</label>
+            <input type="range" id="frequency" min="300" max="1000" value="600" step="50">
+            <span id="frequency-value">600</span>
+          </div>
+          
+          <div class="audio-control-group">
+            <label for="volume">Volume:</label>
+            <input type="range" id="volume" min="0" max="100" value="50" step="5">
+            <span id="volume-value">50%</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mt-4">
+        <div class="card-header">
+          <h2 class="card-title">Letters A-Z</h2>
+        </div>
+        <table id="letters-table">
+          <thead>
+            <tr>
+              <th>Character</th>
+              <th>Morse Code</th>
+              <th>Play</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-char="A" data-morse="."><td>A</td><td>.-</td><td><button class="btn btn-sm btn-secondary play-btn" data-text="A">Play</button></td></tr>
+            <tr data-char="B" data-morse="-..."><td>B</td><td>-...</td><td><button class="btn btn-sm btn-secondary play-btn" data-text="B">Play</button></td></tr>
+            <tr data-char="C" data-morse="-.-."><td>C</td><td>-.-.</td><td><button class="btn btn-sm btn-secondary play-btn" data-text="C">Play</button></td></tr>
+            <tr data-char="D" data-morse="-.."><td>D</td><td>-..</td><td><button class="btn btn-sm btn-secondary play-btn" data-text="D">Play</button></td></tr>
+            <tr data-char="E" data-morse="."><td>E</td><td>.</td><td><button class="btn btn-sm btn-secondary play-btn" data-text="E">Play</button></td></tr>
+            <tr data-char="F" data-morse="..-."><td>F</td><td>..-.</td><td><button class="btn btn-sm btn-secondary play-btn" data-text="F">Play</button></td></tr>
+            <tr data-char="G" data-morse="--."><td>G</td><td>--.</td><td><button class="btn btn-sm btn-secondary play-btn" data-text="G">Play</button></td></tr>
+            <tr data-char="H" data-morse="...."><td>H</td><td>....</td><td><button class="btn btn-sm btn-secondary play-btn" data-text="H">Play</button></td></tr>
+            <tr data-char="I" data-morse=".."><td>I</td><td>..</td><td><button class="btn btn-sm btn-secondary play-btn" data-text="I">Play</button></td></tr>
+            <tr data-char="J" data-morse=".---"><td>J</td><td>.---</td><td><button class="btn btn-sm btn-secondary play-btn" data-text="J">Play</button></td></tr>
+            <tr data-char="K" data-morse="-.-"><td>K</td><td>-.-</td><td><button class="btn btn-sm btn-secondary play-btn" data-text="K">Play</button></td></tr>
+            <tr data-char="L" data-morse=".-.."><td>L</td><td>.-..</td><td><button class="btn btn-sm btn-secondary play-btn" data-text="L">Play</button></td></tr>
+            <tr data-char="M" data-morse="--"><td>M</td><td>--</td><td><button class="btn btn-sm btn-secondary play-btn" data-text="M">Play</button></td></tr>
+            <tr data-char="N" data-morse="-."><td>N</td><td>-.</td><td><button class="btn btn-sm btn-secondary play-btn" data-text="N">Play</button></td></tr>
+            <tr data-char="O" data-morse="---"><td>O</td><td>---</td><td><button class="btn btn-sm btn-secondary play-btn" data-text="O">Play</button></td></tr>
+            <tr data-char="P" data-morse=".--."><td>P</td><td>.--.</td><td><button class="btn btn-sm btn-secondary play-btn" data-text="P">Play</button></td></tr>
+            <tr data-char="Q" data-morse="--.-"><td>Q</td><td>--.-</td><td><button class="btn btn-sm btn-secondary play-btn" data-text="Q">Play</button></td></tr>
+            <tr data-char="R" data-morse=".-."><td>R</td><td>.-.</td><td><button class="btn btn-sm btn-secondary play-btn" data-text="R">Play</button></td></tr>
+            <tr data-char="S" data-morse="..."><td>S</td><td>...</td><td><button class="btn btn-sm btn-secondary play-btn" data-text="S">Play</button></td></tr>
+            <tr data-char="T" data-morse="-"><td>T</td><td>-</td><td><button class="btn btn-sm btn-secondary play-btn" data-text="T">Play</button></td></tr>
+            <tr data-char="U" data-morse="..-"><td>U</td><td>..-</td><td><button class="btn btn-sm btn-secondary play-btn" data-text="U">Play</button></td></tr>
+            <tr data-char="V" data-morse="...-"><td>V</td><td>...-</td><td><button class="btn btn-sm btn-secondary play-btn" data-text="V">Play</button></td></tr>
+            <tr data-char="W" data-morse=".--"><td>W</td><td>.--</td><td><button class="btn btn-sm btn-secondary play-btn" data-text="W">Play</button></td></tr>
+            <tr data-char="X" data-morse="-..-"><td>X</td><td>-..-</td><td><button class="btn btn-sm btn-secondary play-btn" data-text="X">Play</button></td></tr>
+            <tr data-char="Y" data-morse="-.--"><td>Y</td><td>-.--</td><td><button class="btn btn-sm btn-secondary play-btn" data-text="Y">Play</button></td></tr>
+            <tr data-char="Z" data-morse="--.."><td>Z</td><td>--..</td><td><button class="btn btn-sm btn-secondary play-btn" data-text="Z">Play</button></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card mt-4">
+        <div class="card-header">
+          <h2 class="card-title">Numbers 0-9</h2>
+        </div>
+        <table id="numbers-table">
+          <thead>
+            <tr>
+              <th>Number</th>
+              <th>Morse Code</th>
+              <th>Play</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-char="0" data-morse="-----"><td>0</td><td>-----</td><td><button class="btn btn-sm btn-secondary play-btn" data-text="0">Play</button></td></tr>
+            <tr data-char="1" data-morse=".----"><td>1</td><td>.----</td><td><button class="btn btn-sm btn-secondary play-btn" data-text="1">Play</button></td></tr>
+            <tr data-char="2" data-morse="..---"><td>2</td><td>..---</td><td><button class="btn btn-sm btn-secondary play-btn" data-text="2">Play</button></td></tr>
+            <tr data-char="3" data-morse="...--"><td>3</td><td>...--</td><td><button class="btn btn-sm btn-secondary play-btn" data-text="3">Play</button></td></tr>
+            <tr data-char="4" data-morse="....-"><td>4</td><td>....-</td><td><button class="btn btn-sm btn-secondary play-btn" data-text="4">Play</button></td></tr>
+            <tr data-char="5" data-morse="....."><td>5</td><td>.....</td><td><button class="btn btn-sm btn-secondary play-btn" data-text="5">Play</button></td></tr>
+            <tr data-char="6" data-morse="-...."><td>6</td><td>-....</td><td><button class="btn btn-sm btn-secondary play-btn" data-text="6">Play</button></td></tr>
+            <tr data-char="7" data-morse="--..."><td>7</td><td>--...</td><td><button class="btn btn-sm btn-secondary play-btn" data-text="7">Play</button></td></tr>
+            <tr data-char="8" data-morse="---.."><td>8</td><td>---..</td><td><button class="btn btn-sm btn-secondary play-btn" data-text="8">Play</button></td></tr>
+            <tr data-char="9" data-morse="----."><td>9</td><td>----.</td><td><button class="btn btn-sm btn-secondary play-btn" data-text="9">Play</button></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card mt-4">
+        <div class="card-header">
+          <h2 class="card-title">Common Punctuation</h2>
+        </div>
+        <table id="punctuation-table">
+          <thead>
+            <tr>
+              <th>Character</th>
+              <th>Morse Code</th>
+              <th>Play</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-char="." data-morse=".----."><td>.</td><td>.-.-.-</td><td><button class="btn btn-sm btn-secondary play-btn" data-text=".">Play</button></td></tr>
+            <tr data-char="," data-morse="--..--"><td>,</td><td>--..--</td><td><button class="btn btn-sm btn-secondary play-btn" data-text=",">Play</button></td></tr>
+            <tr data-char="?" data-morse="..--.."><td>?</td><td>..--..</td><td><button class="btn btn-sm btn-secondary play-btn" data-text="?">Play</button></td></tr>
+            <tr data-char="'" data-morse=".----."><td>'</td><td>.----.</td><td><button class="btn btn-sm btn-secondary play-btn" data-text="'">Play</button></td></tr>
+            <tr data-char="!" data-morse="-.-.--"><td>!</td><td>-.-.--</td><td><button class="btn btn-sm btn-secondary play-btn" data-text="!">Play</button></td></tr>
+            <tr data-char="/" data-morse="-..-."><td>/</td><td>-..-.</td><td><button class="btn btn-sm btn-secondary play-btn" data-text="/">Play</button></td></tr>
+            <tr data-char="(" data-morse="-.--."><td>(</td><td>-.--.</td><td><button class="btn btn-sm btn-secondary play-btn" data-text="(">Play</button></td></tr>
+            <tr data-char=")" data-morse="-.--.-"><td>)</td><td>-.--.-</td><td><button class="btn btn-sm btn-secondary play-btn" data-text=")">Play</button></td></tr>
+            <tr data-char="&" data-morse=".-..."><td>&</td><td>.-...</td><td><button class="btn btn-sm btn-secondary play-btn" data-text="&">Play</button></td></tr>
+            <tr data-char=":" data-morse="---..."><td>:</td><td>---</td><td><button class="btn btn-sm btn-secondary play-btn" data-text=":">Play</button></td></tr>
+            <tr data-char=";" data-morse="-.-.-."><td>;</td><td>-.-.-.</td><td><button class="btn btn-sm btn-secondary play-btn" data-text=";">Play</button></td></tr>
+            <tr data-char="=" data-morse="-...-"><td>=</td><td>-...-</td><td><button class="btn btn-sm btn-secondary play-btn" data-text="=">Play</button></td></tr>
+            <tr data-char="+" data-morse=".-.-."><td>+</td><td>.-.-.</td><td><button class="btn btn-sm btn-secondary play-btn" data-text="+">Play</button></td></tr>
+            <tr data-char="-" data-morse="-....-"><td>-</td><td>-....-</td><td><button class="btn btn-sm btn-secondary play-btn" data-text="-">Play</button></td></tr>
+            <tr data-char="_" data-morse="..--.-"><td>_</td><td>..--.-</td><td><button class="btn btn-sm btn-secondary play-btn" data-text="_">Play</button></td></tr>
+            <tr data-char="&quot;" data-morse=".-."><td>"</td><td>.-..-.</td><td><button class="btn btn-sm btn-secondary play-btn" data-text="&quot;">Play</button></td></tr>
+            <tr data-char="$" data-morse="...-..-"><td>$</td><td>...-..-</td><td><button class="btn btn-sm btn-secondary play-btn" data-text="$">Play</button></td></tr>
+            <tr data-char="@" data-morse=".--.-."><td>@</td><td>.--.-.</td><td><button class="btn btn-sm btn-secondary play-btn" data-text="@">Play</button></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card mt-4">
+        <div class="card-header">
+          <h2 class="card-title">Morse Code Tips</h2>
+        </div>
+        
+        <h3>Learning Strategy</h3>
+        <p>Start with the most common letters: E, T, A, O, I, N, S, H, R, D, L, U. These 12 letters account for about 80% of English text. Master them first before moving to less common characters.</p>
+        
+        <h3 class="mt-3">Audio vs Visual</h3>
+        <p>While this reference shows the visual patterns, Morse code is primarily an auditory skill. Use the play buttons to hear each character and learn the rhythm, not just the dot-dash patterns.</p>
+        
+        <h3 class="mt-3">Practice Regularly</h3>
+        <p>Consistent practice is key. Even 15-20 minutes daily can lead to significant improvement. Use our letter practice and audio practice modes to build your skills systematically.</p>
+      </div>
+
+      <div class="mt-4">
+        <a href="audio-practice.html" class="btn btn-secondary">Audio Practice</a>
+        <a href="letter-practice.html" class="btn btn-secondary">Letter Practice</a>
+        <a href="number-practice.html" class="btn btn-secondary">Number Practice</a>
+        <a href="learn-morse-code.html" class="btn btn-secondary">Learn Morse Code</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-links">
+        <a href="about.html">About</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+      <p class="footer-copyright">© 2026 Morse Code Audio & Signal Trainer</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/audio.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const audio = new MorseAudio();
+      
+      const wpmSlider = document.getElementById('wpm');
+      const wpmValue = document.getElementById('wpm-value');
+      const frequencySlider = document.getElementById('frequency');
+      const frequencyValue = document.getElementById('frequency-value');
+      const volumeSlider = document.getElementById('volume');
+      const volumeValue = document.getElementById('volume-value');
+      const searchInput = document.getElementById('search-input');
+      
+      wpmSlider.addEventListener('input', function() {
+        const wpm = parseInt(this.value);
+        wpmValue.textContent = wpm;
+        audio.setWPM(wpm);
+      });
+
+      frequencySlider.addEventListener('input', function() {
+        const freq = parseInt(this.value);
+        frequencyValue.textContent = freq;
+        audio.setFrequency(freq);
+      });
+
+      volumeSlider.addEventListener('input', function() {
+        const vol = parseInt(this.value) / 100;
+        volumeValue.textContent = this.value + '%';
+        audio.setVolume(vol);
+      });
+
+      document.querySelectorAll('.play-btn').forEach(button => {
+        button.addEventListener('click', function() {
+          const text = this.getAttribute('data-text');
+          audio.setWPM(parseInt(wpmSlider.value));
+          audio.setFrequency(parseInt(frequencySlider.value));
+          audio.setVolume(parseInt(volumeSlider.value) / 100);
+          audio.play(text);
+        });
+      });
+
+      searchInput.addEventListener('input', function() {
+        const searchTerm = this.value.toLowerCase().trim();
+        
+        document.querySelectorAll('tbody tr').forEach(row => {
+          const char = row.getAttribute('data-char').toLowerCase();
+          const morse = row.getAttribute('data-morse').toLowerCase();
+          
+          if (searchTerm === '' || char.includes(searchTerm) || morse.includes(searchTerm)) {
+            row.style.display = '';
+          } else {
+            row.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
