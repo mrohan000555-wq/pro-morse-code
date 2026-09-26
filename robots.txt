@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://morse-audio-trainer.deno.dev/sitemap.xml
+Sitemap: https://pro-morse-code.mrohan000555-wq.deno.net/sitemap.xml
